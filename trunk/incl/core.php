@@ -14,7 +14,7 @@ defined("BBR_EXEC") or die("Silence is golden");
 **/
 class BbrCore{
 function __construct() {
-    add_filter( 'plugin_action_links_billing-at-registration/billing-at-registration.php', array($this, 'bbr_settings_link') );
+    add_filter( 'plugin_action_links_bakkbone-billing-at-registration/bakkbone-billing-at-registration.php', array($this, 'bbr_settings_link') );
     add_action( 'woocommerce_register_form_start', array($this, 'bbr_extra_register_fields') );
     add_action( 'woocommerce_register_post', array($this, 'bbr_validate_extra_register_fields'), 10, 3 );
     add_action( 'woocommerce_created_customer', array($this, 'bbr_save_extra_register_fields') );

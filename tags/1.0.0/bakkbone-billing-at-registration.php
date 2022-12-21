@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: BAKKBONE Billing at Registration
- * Plugin URI: https://www.bakkbone.com.au/
+ * Plugin URI: 
  * Description: Allows for WooCommerce billing fields to be collected on the My Account registration page.
  * Version: 1.0.0
  * Author: BAKKBONE Australia
