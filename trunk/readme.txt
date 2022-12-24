@@ -29,6 +29,9 @@ Required:
 
 == Screenshots ==
 
+1. Options page
+2. Options page
+3. Output
 
 == Changelog ==
 = 1.0.0 =
