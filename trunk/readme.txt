@@ -19,7 +19,7 @@ Allows for WooCommerce billing fields to be collected on the My Account registra
 <ol><li>Search for "BAKKBONE" in the Plugin Repository from the Plugins > Add New screen</li></ol>
 = Manual installation =
 <ol><li>Unzip the plugin archive on your computer</li>
-<li>Upload `billing-at-registration` directory to your `/wp-content/plugins/` directory</li>
+<li>Upload 'bakkbone-billing-at-registration' directory to your '/wp-content/plugins/' directory</li>
 <li>Activate the plugin through the 'Plugins' menu in WordPress</li></ol>
 
 == Frequently Asked Questions ==
