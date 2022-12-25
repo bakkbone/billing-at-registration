@@ -1,5 +1,5 @@
 === BAKKBONE Billing at Registration ===
-Contributors: leggroup
+Contributors: bakkbone
 Donate link: 
 Tags: filters,billing,registration,form,ecommerce,package,woocommerce
 Requires at least: 5.0
