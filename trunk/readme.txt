@@ -12,7 +12,6 @@ License URI: https://www.gnu.org/licenses/gpl.html
 Allows for WooCommerce billing fields to be collected on the My Account registration page.
 
 == Description ==
-[![WP compatibility](https://plugintests.com/plugins/wporg/bakkbone-billing-at-registration/wp-badge.svg)](https://plugintests.com/plugins/wporg/bakkbone-billing-at-registration/latest) [![PHP compatibility](https://plugintests.com/plugins/wporg/bakkbone-billing-at-registration/php-badge.svg)](https://plugintests.com/plugins/wporg/bakkbone-billing-at-registration/latest)
 Allows for WooCommerce billing fields to be collected on the My Account registration page.
 
 == Installation ==
