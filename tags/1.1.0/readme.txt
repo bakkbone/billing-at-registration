@@ -3,7 +3,7 @@ Contributors: bakkbone
 Donate link: 
 Tags: filters,billing,registration,form,ecommerce,package,woocommerce
 Requires at least: 5.0
-Tested up to: 6.1.1
+Tested up to: 6.2
 Requires PHP: 7.3
 Stable tag: 1.1.0
 License: GNU General Public License (GPL) 3.0
@@ -34,7 +34,7 @@ Required:
 3. Output
 
 == Changelog ==
-= 1.1.1 =
+= 1.1.0 =
 * CHANGE: Redesign visuals of settings page
 * ADD: Notice presenting when required settings not enabled now includes ajax link to automatically fix settings.
 * DEV: Tidy code, remove bloat
