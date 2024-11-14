@@ -1,10 +1,13 @@
 <?php
-
 /**
  * @author BAKKBONE Australia
  * @package BbrAdminNotices
  * @license GNU General Public License (GPL) 3.0
 **/
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 defined("BBR_EXEC") or die("Silence is golden");
 

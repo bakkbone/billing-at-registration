@@ -3,9 +3,9 @@ Contributors: bakkbone
 Donate link: 
 Tags: filters,billing,registration,form,ecommerce,package,woocommerce
 Requires at least: 5.0
-Tested up to: 6.2
-Requires PHP: 7.3
-Stable tag: 1.1.0
+Tested up to: 6.7
+Requires PHP: 7.4
+Stable tag: 1.2.0
 License: GNU General Public License (GPL) 3.0
 License URI: https://www.gnu.org/licenses/gpl.html
 
@@ -34,6 +34,11 @@ Required:
 3. Output
 
 == Changelog ==
+= 1.2.0 =
+* DEV: Bump minimum PHP to 7.4
+* DEV: Rename settings class for uniqueness
+* DEV: Fix issue where POST variables were being treated as translatable strings
+* TEST: Tested WP 6.7
 = 1.1.0 =
 * CHANGE: Redesign visuals of settings page
 * ADD: Notice presenting when required settings not enabled now includes ajax link to automatically fix settings.
@@ -42,5 +47,4 @@ Required:
 * Initial release.
 
 == Upgrade Notice ==
-
 

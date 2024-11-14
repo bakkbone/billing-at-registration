@@ -1,10 +1,10 @@
 <?php
-
 /**
  * Plugin Name: BAKKBONE Billing at Registration
- * Plugin URI: 
+ * Plugin URI: https://plugins.bkbn.au/downloads/bakkbone-billing-at-registration/
  * Description: Allows for WooCommerce billing fields to be collected on the My Account registration page.
- * Version: 1.1.0
+ * Version: 1.2.0
+ * Requires Plugins: woocommerce
  * Author: BAKKBONE Australia
  * Author URI: https://www.bakkbone.com.au/
  * License: GNU General Public License (GPL) 3.0
@@ -13,6 +13,9 @@
  * Domain Path: /i18n
 **/
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 if (!defined("WPINC")){
 	die;
@@ -47,7 +50,7 @@ function run_bakkbone_billing_at_registration()
 {
 	$enqueueStyles = new BbrEnqueueStyles();  
 	$admin_notices = new BbrAdminNotices();  
-	$WooSettings = new SettingsWooSetting();
+	$WooSettings = new BBRSettingsWooSetting();
 	$BbrCore = new BbrCore();
 }
 

@@ -1,14 +1,17 @@
 <?php
-
 /**
  * @author BAKKBONE Australia
- * @package SettingsWooSetting
+ * @package BBRSettingsWooSetting
  * @license GNU General Public License (GPL) 3.0
 **/
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 defined("BBR_EXEC") or die("Silence is golden");
 
-class SettingsWooSetting{
+class BBRSettingsWooSetting{
 	
 	function __construct(){
 		add_filter("woocommerce_get_sections_account", array($this, "BbrSettingsaddSection"));

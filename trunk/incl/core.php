@@ -1,11 +1,12 @@
 <?php
-
 /**
  * @author BAKKBONE Australia
  * @package BbrCore
  * @license GNU General Public License (GPL) 3.0
 **/
-
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 defined("BBR_EXEC") or die("Silence is golden");
 
 class BbrCore{
@@ -38,7 +39,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-first">
 			<label for="reg_billing_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
+			<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) echo esc_attr( $_POST['billing_first_name'] ); ?>" />
         </p>
 		<?php
 	}else{
@@ -46,17 +47,17 @@ function bbr_extra_register_fields() {
     		?>
 		<p class="form-row form-row-first">
 			<label for="reg_billing_first_name"><?php _e( 'First name (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
+			<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) echo esc_attr( $_POST['billing_first_name'] ); ?>" />
         </p>
 		<?php
 	    }
 	}
-	
+
 	if(get_option("bbr_last_name") == "required") {
 		?>
     	<p class="form-row form-row-last">
     		<label for="reg_billing_last_name"><?php _e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
-    		<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
+    		<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) echo esc_attr( $_POST['billing_last_name'] ); ?>" />
     	</p>
 		<?php
 	}else{
@@ -64,17 +65,17 @@ function bbr_extra_register_fields() {
     		?>
     	<p class="form-row form-row-last">
     		<label for="reg_billing_last_name"><?php _e( 'Last name (optional)', 'woocommerce' ); ?></label>
-    		<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
+    		<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) echo esc_attr( $_POST['billing_last_name'] ); ?>" />
     	</p>
-		<?php	        
+		<?php
 	    }
 	}
-	
+
 	if(get_option("bbr_company") == "required") {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_company"><?php _e( 'Company', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_company" id="reg_billing_company" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_company" id="reg_billing_company" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	}else{
@@ -82,12 +83,12 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_company"><?php _e( 'Company (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_company" id="reg_billing_company" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_company" id="reg_billing_company" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
-		<?php	        
+		<?php
 	    }
 	}
-	
+
 	if(get_option("bbr_country") == "required") {
 	    $field = [
         'type' => 'country',
@@ -111,7 +112,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_address_1"><?php _e( 'Address Line 1', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php esc_attr_e( $_POST['billing_address_1'] ); ?>" />
+			<input type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php echo esc_attr( $_POST['billing_address_1'] ); ?>" />
 		</p>
 		<?php
 	}else{
@@ -119,9 +120,9 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_address_1"><?php _e( 'Address Line 1 (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php esc_attr_e( $_POST['billing_address_1'] ); ?>" />
+			<input type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php echo esc_attr( $_POST['billing_address_1'] ); ?>" />
 		</p>
-		<?php	        
+		<?php
 	    }
 	}
 
@@ -129,7 +130,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_address_2"><?php _e( 'Address Line 2', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_address_2" id="reg_billing_address_2" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_address_2" id="reg_billing_address_2" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	}else{
@@ -137,9 +138,9 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_address_2"><?php _e( 'Address Line 2 (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_address_2" id="reg_billing_address_2" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_address_2" id="reg_billing_address_2" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
-		<?php	        
+		<?php
 	    }
 	}
 
@@ -147,7 +148,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_city"><?php _e( 'City', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	}else{
@@ -155,17 +156,17 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_city"><?php _e( 'City (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
-	    }	    
+	    }
 	}
 
 	if(get_option("bbr_postcode") == "required") {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_postcode"><?php _e( 'Postcode', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	}else{
@@ -173,7 +174,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_postcode"><?php _e( 'Postcode (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	    }
@@ -204,7 +205,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_phone"><?php _e( 'Phone', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	}else{
@@ -212,7 +213,7 @@ function bbr_extra_register_fields() {
 		?>
 		<p class="form-row form-row-wide">
 			<label for="reg_billing_phone"><?php _e( 'Phone (optional)', 'woocommerce' ); ?></label>
-			<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+			<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php echo esc_attr( $_POST['billing_company'] ); ?>" />
 		</p>
 		<?php
 	    }
